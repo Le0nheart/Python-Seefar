@@ -64,3 +64,14 @@ print(getDateTime(xz) + datetime.timedelta(hours = 8))
 print(getDateTime(dz) + datetime.timedelta(hours = 8))
 print(getDateTime(cf) + datetime.timedelta(hours = 8))
 print(getDateTime(qf) + datetime.timedelta(hours = 8))
+
+#年份天干地支
+test_year = '2018' #上限2104
+def cc_year (test_year):
+    year_tg = int(test_year) - all_date_time[0] + 34
+    if year_tg <= 59:
+        print(jz60[year_tg])
+    else:
+        year_tg1 = year_tg - 60
+        print(jz60[year_tg1])
+print(cc_year(test_year))
